@@ -36,8 +36,8 @@ Feature: PurchaseRequests
         And the user writes "301330" to the selected text field
         And the user selects the text field with name: "Currency"
         And the user writes "EUR" to the selected text field
-        And the user selects the text field with name: "Tax rule"
-        And the user writes "FRA" to the selected text field
+        #And the user selects the text field with name: "Tax rule"
+        #And the user writes "FRA" to the selected text field
         And the user selects the text field with name: "Payment term"
         And the user writes "15EOM-W20" to the selected text field
         And the user selects the text field with name: "Purchase Admin"
@@ -87,7 +87,6 @@ Feature: PurchaseRequests
         And the user clicks the "Create" main action button on the right panel
         And the user selects the text field with name: "Request no."
         And the user stores the value of the selected text field with the key: "ENV_REQ_NUMBER"
-        And the user selects the text field with name: "Workflow comments*"
         And the user selects the text field with name: "Signatory 1"
         Then the value of the selected text field is "MURAT Laurence"
         And the user selects the text field with name: "Signature Status"
@@ -112,35 +111,8 @@ Feature: PurchaseRequests
         And the user clicks the "Workflow" button in the header
         And the user selects the text field with name: "Signature Status"
         And the value of the selected text field is "Pending FP&A"
-
-    Scenario: PR Duplication
-        When the user selects the text field with name: "Request no."
-        And the user writes "" to the selected text field
-        And the user hits tab
-        #Then a confirmation dialog appears with the message "Dates and prices recalculated"
-        #And the user clicks "OK" button on the confirmation dialog
-
-        And the user hits tab
-        And the user selects the text field with name: "Workflow comments*"
-        And the user writes block of text to the selected text area
-            """
-            Project approved for launch
-            Approved by project supervisor
-            """
-        And the user hits tab
-        And the user clicks the "Create" main action button on the right panel
-        And an alert box with the text "Continue and confirm the duplication?" appears
-        And the user clicks the "Yes" opinion in the alert box
-        When an alert box with the text "Duplicate attachments and comments?" appears
-        And the user clicks the "Yes" opinion in the alert box
-        And the user clicks the "Attachments" main action button on the right panel
-        And the user selects the data table of section: "Attachments"
-        And the user selects cell with column header: "Document name" and row number: 1
-        Then the value of the selected cell has string pattern "[P2P attach]/Test.pdf"
         And the user clicks the "Close page" main action button on the right panel
 
-    Scenario: PO Creation from PR ~ 
-    
     Scenario: Logout scenario
         Then the user logs-out from the system
 

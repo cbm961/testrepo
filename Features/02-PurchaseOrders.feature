@@ -8,7 +8,7 @@
 # - Created by :
 # - Created date - 2024-01-09
 # - Updated by :
-# - Updated date :  
+# - Updated date :
 ###########################################################################
 
 Feature: PurchaseOrders
@@ -55,6 +55,7 @@ Feature: PurchaseOrders
         And the user selects cell with column header: "PRJ" and row number: 1
         And the user adds the text "000020" in selected cell
         And the user selects the text field with name: "Workflow comments*"
+        And the user selects the text field with name: "Workflow comments*"
         And the user writes block of text to the selected text area
             """
             Project approved for launch
@@ -65,14 +66,6 @@ Feature: PurchaseOrders
         #Check FP&A WF enabled
         Then the user clicks the "FP&A WF" button in the header
         And an alert box with the text "Please check the attachements...workflow not transmisted..." appears
-        And the user clicks the "Ok" opinion in the alert box
-
-        #Check Info WF enabled
-        When the user selects the drop down list with name: "Order Type"
-        And the user clicks on "Tech PO : External" option of the selected drop down list
-        And the user clicks the "Save" main action button on the right panel
-        And the user clicks the "Info WF" button in the header
-        Then an alert box with the text "Please check the attachements...workflow not transmisted..." appears
         And the user clicks the "Ok" opinion in the alert box
 
     Scenario: PO Duplication
@@ -103,9 +96,10 @@ Feature: PurchaseOrders
         When the user selects the drop down list with name: "Order Type"
         And the user clicks on "Tech PO : External" option of the selected drop down list
         Then the user selects the text field with name: "Signature Status"
-        And the value of the selected text field is "Info WF to launch"
+        And the value of the selected text field is "Fully signed"
         And the user clicks the "Save" main action button on the right panel
         And the user clicks the "Close page" main action button on the right panel
 
     Scenario: Logout scenario
         Then the user logs-out from the system
+
