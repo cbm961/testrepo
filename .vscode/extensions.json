@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "alexkrechik.cucumberautocomplete",
+        "streetsidesoftware.code-spell-checker",
+        "eg2.tslint",
+        "rebornix.project-snippets",
+        "esbenp.prettier-vscode",
+        "vscode-icons-team.vscode-icons"
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Debug",
+            "command": "echo ${input:debug} ",
+            "type": "shell",
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "debug",
+            "type": "command",
+            "command": "workbench.action.terminal.kill",
+        }
+        ]
+    }
+    

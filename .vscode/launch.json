@@ -1,0 +1,21 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "autoAttachChildProcesses": true,
+      "name": "WebdriverIO",
+      "program": "${workspaceRoot}/node_modules/@wdio/cli/bin/wdio.js",
+      "envFile": "${workspaceFolder}/cucumber-config/parameters",
+      "cwd": "${workspaceRoot}",
+      "console": "integratedTerminal",
+      "args": [
+        "${workspaceFolder}/node_modules/@sageatp/x3-automatedtestplatform/config/debug.js",
+        "--spec",
+        "${workspaceFolder}/${relativeFile}"        
+      ],
+      "preLaunchTask": "Debug",
+    }
+  ]
+}

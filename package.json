@@ -1,0 +1,32 @@
+{
+  "name": "@sageatp/x3-atppackage",
+  "version": "3.2.0",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "allure-config",
+    "cucumber-config",
+    "cucumber-user-config",
+    "Samples",
+    ".vscode"
+  ],
+  "scripts": {
+    "chrome": "wdio ./node_modules/@sageatp/x3-automatedtestplatform/config/chrome.js",
+    "chrome-headless": "wdio ./node_modules/@sageatp/x3-automatedtestplatform/config/chrome-headless.js",
+    "cloud-chrome": "wdio ./node_modules/@sageatp/x3-automatedtestplatform/config/cloud.js",
+    "cloud-debug": "wdio ./node_modules/@sageatp/x3-automatedtestplatform/config/cloud-debug.js",
+    "view-report": "node ./node_modules/@sageatp/x3-automatedtestplatform/config/allure/view-report.js",
+    "view-and-archive-report": "node ./node_modules/@sageatp/x3-automatedtestplatform/config/allure/view-and-archive-report.js",
+    "view-archived-report": "node ./node_modules/@sageatp/x3-automatedtestplatform/config/allure/view-archived-report.js",
+    "postinstall": "npm run copy-parameters && npm run copy-user-stored-values && npm run create-workspace",
+    "copy-parameters": "if not exist cucumber-config\\parameters (copy cucumber-config\\parameters_template cucumber-config\\parameters)",
+    "copy-user-stored-values": "if not exist cucumber-user-config\\user\\user-stored-values (copy cucumber-user-config\\user\\user-stored-values_template cucumber-user-config\\user\\user-stored-values)",
+    "create-workspace": "if not exist Workspace (mkdir Workspace)",
+    "allure-pdf-print": "node ./node_modules/@sageatp/x3-automatedtestplatform/config/allure/allure-to-pdf.js"
+  },
+  "author": "X3 Team",
+  "license": "SEE LICENSE IN LICENCE",
+  "dependencies": {
+    "@sageatp/x3-automatedtestplatform": "3.2.0"
+  }
+}

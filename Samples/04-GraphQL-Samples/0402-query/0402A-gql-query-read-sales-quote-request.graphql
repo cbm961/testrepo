@@ -1,0 +1,30 @@
+{
+  x3Sales {
+    salesQuote {
+      query(filter: "{id: 'FR0111507SQD00000001'}") {
+        edges {
+          node {
+            id
+            salesSite {
+              code
+              name
+            }
+            soldToCustomer {
+              _id
+              companyNames {
+                query {
+                  edges {
+                    node {
+                      code
+                      companyName
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  x3MasterData {
+    customer {
+      query(filter: "{code: 'NA001'}") {
+        edges {
+          node {
+            _id
+            code {
+              code
+            }
+            companyNames {
+              query {
+                edges {
+                  node {
+                    companyName
+                  }
+                }
+              }
+            }
+            shortCompanyName
+            serviceContract {
+              id
+              description
+            }
+          }
+        }
+      }
+    }
+  }
+}

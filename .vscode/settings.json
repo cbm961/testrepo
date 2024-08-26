@@ -1,0 +1,23 @@
+{
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/build": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true
+  },
+  "files.associations": {
+    //"./features/**/**/**/*.feature": "gherkin"
+    "**/features/[!.].feature": "gherkin"
+  },
+  "files.defaultLanguage": "json",
+  "cSpell.words": ["camelize", "webdriverio"],
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "cucumberautocomplete.steps": [
+    "./node_modules/@sageatp/x3-automatedtestplatform/build/deployment-step-definitions.js"
+  ],
+  "cucumberautocomplete.syncfeatures": "./**/**/**/*.feature"
+}

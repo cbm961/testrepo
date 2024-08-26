@@ -1,0 +1,39 @@
+{
+  "data": {
+    "x3Sales": {
+      "salesQuote": {
+        "query": {
+          "edges": [
+            {
+              "node": {
+                "id": "FR0111507SQD00000001",
+                "salesSite": {
+                  "code": "FR011",
+                  "name": "Comptech SA"
+                },
+                "soldToCustomer": {
+                  "_id": "FR003",
+                  "companyNames": {
+                    "query": {
+                      "edges": [
+                        {
+                          "node": {
+                            "code": "FR003",
+                            "companyName": "Cybertek"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "extensions": {
+    "diagnoses": []
+  }
+}

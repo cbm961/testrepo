@@ -1,0 +1,29 @@
+mutation {
+  x3ProjectManagement {
+     timeEntryLine{
+      create(
+        data: {
+           employee: "ADMIN",
+           date: "2024-03-04",
+           project: "NA0131701000024",
+           task: "TS01-01",
+           budget: "B01",
+           projectCostType: "",
+           projectLaborRate: 12.95,
+           employeeCostType: "",
+           employeeLaborRate: 24.78,
+           timeCategory: "",
+           unit: "HR",
+           timeSpent: 10,
+           isValidated: true,
+           isBillable: true,
+           billableFrom: "2024-03-04",
+           localizedDescription: "Test mutation ADMIN"
+            }
+      ) 
+        {
+        lineNumber
+      }
+    }
+  }
+}

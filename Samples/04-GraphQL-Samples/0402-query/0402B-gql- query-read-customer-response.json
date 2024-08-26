@@ -1,0 +1,36 @@
+{
+  "data": {
+    "x3MasterData": {
+      "customer": {
+        "query": {
+          "edges": [
+            {
+              "node": {
+                "_id": "NA001",
+                "code": {
+                  "code": "NA001"
+                },
+                "companyNames": {
+                  "query": {
+                    "edges": [
+                      {
+                        "node": {
+                          "companyName": "International Distributors"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "shortCompanyName": "IntlDist",
+                "serviceContract": null
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "extensions": {
+    "diagnoses": []
+  }
+}
